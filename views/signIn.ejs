@@ -1,0 +1,41 @@
+<html>
+
+<head>
+	<title>Register - Products</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" type="text/css" href="/styles/master.css">
+	<link rel="stylesheet" type="text/css" href="/styles/productListing.css">
+
+	<script type="text/javascript" src="/scripts/master.js" defer></script>
+	<script type="text/javascript" src="/scripts/productListing.js" defer></script>
+</head>
+
+<body>
+	<div class="header">
+		<h1 class="primary-message">Products Listing</h1>
+	</div>
+
+	<div id="main" class="main">
+		<div id="error" <% if (!locals.errorMessage || (locals.errorMessage === "")) { %> class="hidden" <% } %>>
+			<h4 id="errorMessage" class="error-message">
+				<% if (locals.errorMessage && (locals.errorMessage !== "")) { %>
+					<%= locals.errorMessage %>
+				<% } %>
+			</h4>
+		</div>
+
+		<div class="signInWrapper">
+		    <form method="post">
+                <label for="employeeID">Employee ID:</label>
+                <input type="number" id="employeeID" name="employeeID"><br><br>
+                <label for="pass">Password:</label>
+                <input type="password" id="pass" name="pass"><br><br>
+                <input type="submit" value="Sign In">
+            </form>
+		</div>
+	</div>
+
+</body>
+
+</html>
