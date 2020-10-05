@@ -3,6 +3,20 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 function validateForm() {
-	// TODO: Validate the user input
+	var eID = document.getElementsByClassName("inputContent")["eID"];
+	var pass = document.getElementsByClassName("inputContent")["pass"];
+	var fail = false;
+	if (eID == "" || isNaN(eID)) {
+		alert("Employee ID must be nonempty and a sequence of numbers.")
+		fail = true;
+	}
+	if (pass == "") {
+		alert("Password must be nonempty.")
+		fail = true;
+	}
+
+	if (fail) {
+		return false;
+	}
 	return true;
 }
