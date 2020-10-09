@@ -13,11 +13,11 @@ function showTransaction(){
 }
 function showProducts(){
   window.location.assign(
-        "/productDetail/");
+        "/productDetail");
 }
 function showEmployee(){
   window.location.assign(
-        "/employeeDetail/");
+        "/employeeDetail");
 }
 function show_salesReport(){
   alert(“Functionality has not yet been implemented.” );
