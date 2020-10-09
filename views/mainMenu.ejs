@@ -26,6 +26,36 @@
 		</div>
 
 		<!-- TODO: Add the various action button elements -->
+
+	</div>
+
+	<div>
+		<button type="button" class="action" id="transaction">Start Transaction</button>
+	</div>
+	<br>
+
+	<div>
+		<button type="button" class="action" id="products">View Products</button>
+	</div>
+	<br>
+	
+	<div <% if (!locals.isElvatedUser) { %>class="hidden"<% } %>>
+	 <!-- only managers can see these last three buttons -->
+		<button type="button" class="action" id="employee">Create Employee</button>
+		<br>
+		<button type="button" class="action" id="salesReport">Sales Report</button>
+		<br>
+		<button type="button" class="action" id="cashierReport">Cashier Report</button>
+		<br>
+	</div>
+
+
+
+	<div class="footer">
+		<img id="signOutImage" src="/images/Sign-Out.png" alt="Sign Out" class="footer" />
+	</div>
+
+
 	</div>
 
 	<div class="hidden">
@@ -42,29 +72,7 @@
 				}
 			}
 		</script>
-	</div>
 
-	<div>
-		<button type="button" id="transaction">Start Transaction</button>
-	</div>
-	<div>
-		<button type="button" id="products">View Products</button>
-	</div>
-	<% if <!-- manager id here --> { %>
-	<div> <!-- only managers can see these last three buttons -->
-		<button type="button" id="employee">Create Employee</button>
-	</div>
-	<div>
-		<button type="button" id="salesReport">Sales Report</button>
-	</div>
-	<div>
-		<button type="button" id="cashierReport">Cashier Report</button>
-	</div>
-	<% } %>
-
-	<div class="footer">
-		<img id="signOutImage" src="/images/Sign-Out.png" alt="Sign Out" class="footer" />
-	</div>
 
 </body>
 
