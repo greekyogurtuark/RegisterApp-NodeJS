@@ -1,0 +1,79 @@
+<html>
+
+<head>
+	<title>Register - Main Menu</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link rel="stylesheet" type="text/css" href="/styles/master.css">
+
+	<script type="text/javascript" src="/scripts/master.js" defer></script>
+	<script type="text/javascript" src="/scripts/mainMenu.js" defer></script>
+</head>
+
+<body>
+
+	<div class="header">
+		<h1 class="primary-message">Main Menu</h1>
+	</div>
+
+	<div id="main" class="main">
+		<div id="error" <% if (!locals.errorMessage || (locals.errorMessage === "")) { %> class="hidden" <% } %>>
+			<h4 id="errorMessage" class="error-message">
+				<% if (locals.errorMessage && (locals.errorMessage !== "")) { %>
+					<%= locals.errorMessage %>
+				<% } %>
+			</h4>
+		</div>
+
+		<!-- TODO: Add the various action button elements -->
+
+	</div>
+
+	<div>
+		<button type="button" class="action" id="transaction">Start Transaction</button>
+	</div>
+	<br>
+
+	<div>
+		<button type="button" class="action" id="products">View Products</button>
+	</div>
+	<br>
+	
+	<div <% if (!locals.isElvatedUser) { %>class="hidden"<% } %>>
+	 <!-- only managers can see these last three buttons -->
+		<button type="button" class="action" id="employee">Create Employee</button>
+		<br>
+		<button type="button" class="action" id="salesReport">Sales Report</button>
+		<br>
+		<button type="button" class="action" id="cashierReport">Cashier Report</button>
+		<br>
+	</div>
+
+
+
+	<div class="footer">
+		<img id="signOutImage" src="/images/Sign-Out.png" alt="Sign Out" class="footer" />
+	</div>
+
+
+	</div>
+
+	<div class="hidden">
+		<input type="checkbox" id="isRefreshed" class="hidden">
+		<script type="text/javascript">
+			window.onunload = function() {
+				const isRefreshedElement = document.getElementById("isRefreshed");
+
+				if(!isRefreshedElement.checked) {
+					isRefreshedElement.checked = true;
+				} else {
+					isRefreshedElement.checked = false;
+					location.reload();
+				}
+			}
+		</script>
+
+
+</body>
+
+</html>
