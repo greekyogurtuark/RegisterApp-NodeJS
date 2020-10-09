@@ -1,5 +1,6 @@
 export enum ParameterLookup {
-	ProductId = "productId"
+	EmployeeId = "employeeId",
+	ProductId = "productId",
 }
 
 export enum QueryParameterLookup {
@@ -7,10 +8,11 @@ export enum QueryParameterLookup {
 }
 
 export enum ViewNameLookup {
-	SignIn = "signIn",
-	MainMenu = "mainMenu",
-	ProductDetail = "productDetail",
-	ProductListing = "productListing"
+  SignIn = "signIn",
+  MainMenu = "mainMenu",
+  ProductDetail = "productDetail",
+  ProductListing = "productListing",
+  EmployeeDetail = "employeeDetail",
 }
 
 export enum RouteLookup {
