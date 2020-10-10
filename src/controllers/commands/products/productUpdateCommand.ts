@@ -8,7 +8,7 @@ import * as DatabaseConnection from "../models/databaseConnection";
 import { CommandResponse, Product, ProductSaveRequest } from "../../typeDefinitions";
 
 const validateSaveRequest = (saveProductRequest: ProductSaveRequest): CommandResponse<Product> => {
-	let errorMessage: string = "";
+	let errorMessage = "";
 
 	if (Helper.isBlankString(saveProductRequest.id)) {
 		errorMessage = Resources.getString(ResourceKey.PRODUCT_RECORD_ID_INVALID);

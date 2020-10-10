@@ -10,7 +10,7 @@ const validateSaveRequest = (
 	saveProductRequest: ProductSaveRequest
 ): CommandResponse<Product> => {
 
-	let errorMessage: string = "";
+	let errorMessage = "";
 
 	if (Helper.isBlankString(saveProductRequest.lookupCode)) {
 		errorMessage = Resources.getString(ResourceKey.PRODUCT_LOOKUP_CODE_INVALID);

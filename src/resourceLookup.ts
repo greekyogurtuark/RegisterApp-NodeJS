@@ -2,7 +2,7 @@ import * as path from "path";
 import * as fileSystem from "fs";
 
 let stringMapping: { [key: string]: string } = {};
-const stringResourceFilePath: string = "../public/resources/strings/en-US/strings.json";
+const stringResourceFilePath = "../public/resources/strings/en-US/strings.json";
 
 export const Resources = {
 	loadStrings: (): void => {

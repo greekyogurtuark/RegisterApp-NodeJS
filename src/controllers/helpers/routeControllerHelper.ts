@@ -42,7 +42,7 @@ export const processStartError = (
 	redirectBaseLocation?: string
 ): boolean => {
 
-	let processedStartError: boolean = false;
+	let processedStartError = false;
 
 	if ((error.status != null) && (error.status === 404)
 		&& (error.message === Resources.getString(ResourceKey.USER_NOT_FOUND))) {

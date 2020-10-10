@@ -1,4 +1,4 @@
-import { EmployeeModel } from "../models/employeeModel"
+import { EmployeeModel } from "../models/employeeModel";
 import { Resources, ResourceKey } from "../../../resourceLookup";
 import * as EmployeeRepository from "../models/employeeModel";
 import { CommandResponse, Employee } from "../../typeDefinitions";

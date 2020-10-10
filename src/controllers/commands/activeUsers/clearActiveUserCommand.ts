@@ -31,4 +31,4 @@ export const clear =  async (sessionId: string): Promise<CommandResponse<void>> 
 				message: error.message
 			};
 		});
-}
+};

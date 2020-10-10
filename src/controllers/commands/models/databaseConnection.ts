@@ -1,6 +1,6 @@
 import Sequelize from "sequelize";
 
-const defaultMaximumPoolSize: number = 5;
+const defaultMaximumPoolSize = 5;
 
 export const DatabaseConnection: Sequelize.Sequelize =
 	new Sequelize.Sequelize(

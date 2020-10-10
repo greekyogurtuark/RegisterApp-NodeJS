@@ -13,7 +13,7 @@ export const start = async (req: Request, res: Response): Promise<void> => {
 	return ValidateActiveUser.execute((<Express.Session>req.session).id)
 		.then((activeUserCommandResponse: CommandResponse<ActiveUser>): void => {
 			// TODO: Examine the ActiveUser classification if you want this information
-			const isElevatedUser: boolean = true;
+			const isElevatedUser = true;
 
 			// This recommends to Firefox that it refresh the page every time
 			//  it is accessed
@@ -25,7 +25,7 @@ export const start = async (req: Request, res: Response): Promise<void> => {
 				ViewNameLookup.MainMenu,
 				<MainMenuPageResponse>{
 					isElevatedUser: isElevatedUser,
-					errorMessage: Resources.getString(req.query[QueryParameterLookup.ErrorCode])
+					errorMessage: Resources.getString(JSON.stringify(req.query[QueryParameterLookup.ErrorCode]))
 				});
 		}).catch((error: any): void => {
 			if (!Helper.processStartError(error, res)) {

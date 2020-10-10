@@ -14,7 +14,7 @@ export const start = async (req: Request, res: Response): Promise<void> => {
         // Renders Sign In Page with eID and error message as locals
         return res.render(ViewNameLookup.SignIn, <SignInPageResponse> {
           employeeId: req.query["employeeId"],
-          errorMessage: Resources.getString(req.query[QueryParameterLookup.ErrorCode])
+          errorMessage: Resources.getString(JSON.stringify(req.query[QueryParameterLookup.ErrorCode]))
         });
       } else {
         // Redirects to Employee Detail page
