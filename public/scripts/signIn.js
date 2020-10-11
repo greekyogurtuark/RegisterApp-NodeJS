@@ -6,12 +6,13 @@ function validateForm () {
   var eID = document.getElementsByClassName('inputContent').eID
   var pass = document.getElementsByClassName('inputContent').pass
   var fail = false
-  if (eID === '' || isNaN(eID)) {
-    alert(eID)
-    alert('Employee ID must be a nonempty sequence of numbers.')
+
+  if (eID == '' || isNaN(eID)) {
+    alert('Employee ID must be nonempty and a sequence of numbers: ' + eID)
     fail = true
   }
-  if (pass === '') {
+  if (pass == '') {
+
     alert('Password must be nonempty.')
     fail = true
   }
