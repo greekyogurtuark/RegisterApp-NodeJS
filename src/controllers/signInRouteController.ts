@@ -3,7 +3,7 @@ import { ViewNameLookup, QueryParameterLookup, RouteLookup } from "./lookups/rou
 import { Resources, ResourceKey } from "../resourceLookup";
 import * as EmployeesQuery from "./commands/employees/activeEmployeeExistsQuery";
 import * as EmployeeSignIn from "./commands/employees/employeeSignInCommand";
-import { CommandResponse, Employee, SignInPageResponse, PageResponse, ApiResponse } from "./typeDefinitions";
+import { CommandResponse, SignInPageResponse, PageResponse, ApiResponse } from "./typeDefinitions";
 import * as ClearActiveUser from "./commands/activeUsers/clearActiveUserCommand";
 
 export const start = async (req: Request, res: Response): Promise<void> => {
@@ -18,7 +18,7 @@ export const start = async (req: Request, res: Response): Promise<void> => {
         });
       } else {
         // Redirects to Employee Detail page
-        return res.redirect(ViewNameLookup.EmployeeDetail)
+        return res.redirect(ViewNameLookup.EmployeeDetail);
       }
 		}).catch((error: any): void => {
       return res.render(ViewNameLookup.SignIn, <PageResponse> {
