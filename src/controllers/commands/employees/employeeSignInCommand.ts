@@ -1,6 +1,6 @@
 import { EmployeeModel } from "../models/employeeModel";
 import * as EmployeeRepository from "../models/employeeModel";
-import * as ActiveUserRepository from "../models/activeUserModel"
+import * as ActiveUserRepository from "../models/activeUserModel";
 import * as Util from "../helpers/helper";
 import * as DatabaseConnection from "../models/databaseConnection";
 import { CommandResponse, SignInRequest, ActiveUser } from "../../typeDefinitions";
@@ -79,7 +79,7 @@ export const signInCommand = async (req: SignInRequest, session?: Express.Sessio
           employeeId: (<ActiveUserModel>userCommandResponse.data).employeeId,
           classification: (<ActiveUserModel>userCommandResponse.data).classification
         }
-      }
+      };
     });
 
-  }
+};
