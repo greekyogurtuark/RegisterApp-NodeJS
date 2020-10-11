@@ -5,11 +5,11 @@ export interface ProductSaveRequest {
 	lookupCode: string;
 }
 
-<<<<<<< HEAD
 export interface SignInRequest {
 	employeeId: string;
 	password: string;
-=======
+}
+
 export interface EmployeeSaveRequest {
 	id?: string;
 	active: boolean;
@@ -19,7 +19,7 @@ export interface EmployeeSaveRequest {
 	managerId?: string;
 	classification: number;
 	isInitialEmployee?: boolean;
->>>>>>> Sprint2Employee
+
 }
 // End request object definitions
 
