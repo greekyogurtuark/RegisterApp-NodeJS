@@ -26,7 +26,7 @@
 		</div>
 
 		<div class="productsWrapper">
-			<div>
+			<div <% if (!locals.isElvatedUser) { %>class="hidden"<% } %>>  <!-- If errors occur, refer to this line for task13 -->
 				<a href="/productDetail/" class="button">Create New</a>
 			</div>
 			<br />
